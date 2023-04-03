@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - "stable"
+cache:
+  directories:
+    - node_modules
+before_install:
+  - npm install -g @lhci/cli@0.3.x
+script:
+  - npm run build
+  - lhci autorun
+addons:
+  chrome: stable
